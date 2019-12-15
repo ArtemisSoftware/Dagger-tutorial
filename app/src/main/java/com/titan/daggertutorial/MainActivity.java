@@ -4,12 +4,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import javax.inject.Inject;
+
 import dagger.android.DaggerApplication;
 
 
 public class MainActivity extends AppCompatActivity {
 
-    private Car car;
+    @Inject
+    Car car;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         CarComponent component = DaggerCarComponent.create();
-        car = component.getCar();
+        component.inject(this);
         car.drive();
     }
 }
