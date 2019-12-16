@@ -1,6 +1,4 @@
-package com.titan.daggertutorial;
-
-import javax.inject.Inject;
+package com.titan.daggertutorial.car;
 
 import timber.log.Timber;
 

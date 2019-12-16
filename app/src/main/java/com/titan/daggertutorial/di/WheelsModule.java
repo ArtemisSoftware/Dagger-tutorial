@@ -1,4 +1,8 @@
-package com.titan.daggertutorial;
+package com.titan.daggertutorial.di;
+
+import com.titan.daggertutorial.car.Rims;
+import com.titan.daggertutorial.car.Tires;
+import com.titan.daggertutorial.car.Wheels;
 
 import dagger.Module;
 import dagger.Provides;

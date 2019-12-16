@@ -1,4 +1,4 @@
-package com.titan.daggertutorial;
+package com.titan.daggertutorial.car;
 
 import javax.inject.Inject;
 
@@ -26,6 +26,7 @@ public class Car {
 
 
     public void drive() {
+        engine.start();
         Timber.d("Driving...");
     }
 }

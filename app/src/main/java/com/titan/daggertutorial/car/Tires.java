@@ -1,4 +1,4 @@
-package com.titan.daggertutorial;
+package com.titan.daggertutorial.car;
 
 import timber.log.Timber;
 
