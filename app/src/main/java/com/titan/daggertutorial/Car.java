@@ -17,6 +17,14 @@ public class Car {
         this.wheels = wheels;
     }
 
+    @Inject
+    public void enableRemote(Remote remote) {
+
+        Timber.d("Enabling the remote...");
+        remote.setListener(this);
+    }
+
+
     public void drive() {
         Timber.d("Driving...");
     }
