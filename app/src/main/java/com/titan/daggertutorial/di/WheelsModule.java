@@ -9,7 +9,7 @@ import dagger.Provides;
 import timber.log.Timber;
 
 @Module
-public class WheelsModule {
+public abstract class WheelsModule {
 
     @Provides
     static Rims provideRims(){
