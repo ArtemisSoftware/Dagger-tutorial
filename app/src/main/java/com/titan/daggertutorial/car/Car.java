@@ -12,9 +12,9 @@ public class Car {
     @Inject
     public Car(Engine engine, Wheels wheels) {
 
-        Timber.d("Car constructor");
         this.engine = engine;
         this.wheels = wheels;
+        Timber.d("Car constructed");
     }
 
     @Inject

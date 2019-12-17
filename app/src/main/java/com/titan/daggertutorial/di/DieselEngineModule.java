@@ -6,6 +6,7 @@ import com.titan.daggertutorial.car.Engine;
 import dagger.Binds;
 import dagger.Module;
 import dagger.Provides;
+import timber.log.Timber;
 
 @Module
 public class DieselEngineModule {
@@ -17,7 +18,13 @@ public class DieselEngineModule {
     }
 
     @Provides
-    Engine provideEngine(){
-        return new DieselEngine(horsePower);
+    int provideHorsePower(){
+        return horsePower;
+    }
+
+    @Provides
+    Engine provideEngine(DieselEngine engine){
+        Timber.d("Providing Diesel engine...");
+        return engine;
     }
 }

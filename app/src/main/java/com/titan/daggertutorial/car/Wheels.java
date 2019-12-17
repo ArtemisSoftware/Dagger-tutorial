@@ -10,7 +10,7 @@ public class Wheels {
     private Tires tires;
 
     public Wheels(Rims rims, Tires tires) {
-        Timber.d("Wheels constructor");
+        Timber.d("Wheels constructed");
         this.rims = rims;
         this.tires = tires;
     }

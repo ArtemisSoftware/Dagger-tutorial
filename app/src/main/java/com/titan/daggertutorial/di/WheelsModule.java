@@ -19,9 +19,9 @@ public abstract class WheelsModule {
 
     @Provides
     static Tires provideTires(){
+        Timber.d("Providing Tires...");
         Tires tires = new Tires();
         tires.inflate();
-        Timber.d("Providing Tires...");
         return tires;
     }
 
