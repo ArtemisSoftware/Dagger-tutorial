@@ -3,10 +3,12 @@ package com.titan.daggertutorial.di;
 import com.titan.daggertutorial.MainActivity;
 
 import javax.inject.Named;
+import javax.inject.Singleton;
 
 import dagger.BindsInstance;
 import dagger.Component;
 
+@Singleton
 @Component(modules = {WheelsModule.class, PetrolEngineModule.class})
 public interface CarComponent {
 

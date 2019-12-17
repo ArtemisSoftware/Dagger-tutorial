@@ -6,12 +6,14 @@ import timber.log.Timber;
 
 public class Car {
 
+    private Driver driver;
     private Engine engine;
     private Wheels wheels;
 
     @Inject
-    public Car(Engine engine, Wheels wheels) {
+    public Car(Driver driver, Engine engine, Wheels wheels) {
 
+        this.driver = driver;
         this.engine = engine;
         this.wheels = wheels;
         Timber.d("Car constructed");
@@ -27,6 +29,6 @@ public class Car {
 
     public void drive() {
         engine.start();
-        Timber.d("Driving...");
+        Timber.d("Driver " + this.driver + " is driving " + this);
     }
 }
