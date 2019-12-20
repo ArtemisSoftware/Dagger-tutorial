@@ -1,9 +1,12 @@
 package com.titan.daggertutorial.car;
 
+import com.titan.daggertutorial.di.PerActivity;
+
 import javax.inject.Inject;
 
 import timber.log.Timber;
 
+@PerActivity
 public class Car {
 
     private Driver driver;

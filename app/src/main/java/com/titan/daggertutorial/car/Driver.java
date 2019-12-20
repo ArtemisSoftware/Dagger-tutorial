@@ -5,10 +5,13 @@ import javax.inject.Singleton;
 
 import timber.log.Timber;
 
-@Singleton
+
+/**
+ * We don't own this class so we can't annotate it with @Inject
+ */
 public class Driver {
 
-    @Inject
+
     public Driver(){
         Timber.d("Driver constructed");
     }
