@@ -6,13 +6,15 @@ import javax.inject.Named;
 
 import dagger.BindsInstance;
 import dagger.Component;
+import dagger.Subcomponent;
 
 @PerActivity
-@Component(dependencies = AppComponent.class, modules = {WheelsModule.class, PetrolEngineModule.class})
+@Subcomponent(modules = {WheelsModule.class, DieselEngineModule.class})
 public interface ActivityComponent {
 
     void inject(MainActivity mainActivity);
 
+    /*
     @Component.Builder
     interface Builder{
 
@@ -26,6 +28,6 @@ public interface ActivityComponent {
         Builder appComponent(AppComponent component);
 
         ActivityComponent build();
-
     }
+    */
 }

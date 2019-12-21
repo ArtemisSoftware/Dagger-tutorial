@@ -6,7 +6,7 @@ import android.os.Bundle;
 
 import com.titan.daggertutorial.car.Car;
 import com.titan.daggertutorial.di.ActivityComponent;
-import com.titan.daggertutorial.di.DaggerActivityComponent;
+import com.titan.daggertutorial.di.DieselEngineModule;
 
 import javax.inject.Inject;
 
@@ -23,11 +23,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ActivityComponent component = DaggerActivityComponent.builder()
-                .horsePower(1200)
-                .engineCapacity(40000)
-                .appComponent(((App) getApplication()).getAppComponent())
-                .build();
+        ActivityComponent component = ((App) getApplication()).getAppComponent()
+                .getActivityComponent(new DieselEngineModule(4000));
 
         component.inject(this);
 
@@ -36,5 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
         car2.drive();
         Timber.d("car2 left the building");
+
+
     }
 }
