@@ -9,13 +9,13 @@ import dagger.Component;
 import dagger.Subcomponent;
 
 @PerActivity
-@Subcomponent(modules = {WheelsModule.class, DieselEngineModule.class})
+@Subcomponent(modules = {WheelsModule.class, PetrolEngineModule.class})
 public interface ActivityComponent {
 
     void inject(MainActivity mainActivity);
 
-    /*
-    @Component.Builder
+
+    @Subcomponent.Builder
     interface Builder{
 
         @BindsInstance
@@ -25,9 +25,7 @@ public interface ActivityComponent {
         Builder engineCapacity(@Named("engineCapacity") int engineCapacity);
 
 
-        Builder appComponent(AppComponent component);
-
         ActivityComponent build();
     }
-    */
+
 }
