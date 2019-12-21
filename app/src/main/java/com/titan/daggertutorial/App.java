@@ -5,6 +5,7 @@ import android.app.Application;
 import com.titan.daggertutorial.di.ActivityComponent;
 import com.titan.daggertutorial.di.AppComponent;
 import com.titan.daggertutorial.di.DaggerAppComponent;
+import com.titan.daggertutorial.di.DriverModule;
 
 import timber.log.Timber;
 
@@ -22,7 +23,7 @@ public class App extends Application {
         //    Timber.plant(new ReleaseTree());
         //}
 
-        component = DaggerAppComponent.create();
+        component = DaggerAppComponent.factory().create(new DriverModule("Speed racer"));
         Timber.d("Created app component");
     }
 

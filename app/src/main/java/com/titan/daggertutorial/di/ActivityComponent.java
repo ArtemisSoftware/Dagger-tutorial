@@ -14,18 +14,11 @@ public interface ActivityComponent {
 
     void inject(MainActivity mainActivity);
 
+    @Subcomponent.Factory
+    interface  Factory {
 
-    @Subcomponent.Builder
-    interface Builder{
-
-        @BindsInstance
-        Builder horsePower(@Named("horsePower")  int horsePower);
-
-        @BindsInstance
-        Builder engineCapacity(@Named("engineCapacity") int engineCapacity);
-
-
-        ActivityComponent build();
+        ActivityComponent create(@BindsInstance @Named("horsePower")  int horsePower,
+                                 @BindsInstance @Named("engineCapacity") int engineCapacity);
     }
 
 }

@@ -32,6 +32,6 @@ public class Car {
 
     public void drive() {
         engine.start();
-        Timber.d("Driver " + this.driver + " is driving " + this);
+        Timber.d("Driver " + this.driver + " " + driver.name + " is driving " + this);
     }
 }

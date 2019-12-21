@@ -11,8 +11,10 @@ import timber.log.Timber;
  */
 public class Driver {
 
+    String name;
+    public Driver(String name){
 
-    public Driver(){
+        this.name = name;
         Timber.d("Driver constructed");
     }
 }
